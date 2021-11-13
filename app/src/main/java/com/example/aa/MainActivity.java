@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
     Button study, out, daily, adver, mypage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         study = findViewById(R.id.study);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aa">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -12,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AA">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AdverActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".DailyActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MypageActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".OutActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".User"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".StudyActivity"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>
