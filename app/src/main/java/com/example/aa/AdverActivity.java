@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class AdverActivity extends Fragment implements View.OnClickListener {
 
+public class AdverActivity extends Fragment implements View.OnClickListener {
     /*public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }*/
@@ -36,6 +36,7 @@ public class AdverActivity extends Fragment implements View.OnClickListener {
         switch(v.getId()){
             case R.id.btn_writing:
                 Intent intent = new Intent(getActivity(), WritingActivity.class);
+                intent.putExtra("board","adver");
                 startActivity(intent);
                 break;
         }

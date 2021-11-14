@@ -12,6 +12,7 @@
         android:layout_height="match_parent"></FrameLayout>
 
     <TextView
+        android:id="@+id/weather"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="날씨"

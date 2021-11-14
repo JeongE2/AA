@@ -6,9 +6,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button study, out, daily, adver, mypage;
+    TextView weather;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +20,12 @@ public class MainActivity extends AppCompatActivity {
         daily = findViewById(R.id.daily);
         adver = findViewById(R.id.adver);
         mypage = findViewById(R.id.mypage);
+        weather = findViewById(R.id.weather);
 
         study.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
+                weather.setVisibility(View.INVISIBLE);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 StudyActivity study = new StudyActivity();
                 transaction.replace(R.id.frame, study);
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                weather.setVisibility(View.INVISIBLE);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                OutActivity out = new OutActivity();
                 transaction.replace(R.id.frame, out);
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                weather.setVisibility(View.INVISIBLE);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 DailyActivity daily = new DailyActivity();
                 transaction.replace(R.id.frame, daily);
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                weather.setVisibility(View.INVISIBLE);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 AdverActivity adver = new AdverActivity();
                 transaction.replace(R.id.frame, adver);
@@ -67,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                weather.setVisibility(View.INVISIBLE);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 MypageActivity mypage = new MypageActivity();
                 transaction.replace(R.id.frame, mypage);
