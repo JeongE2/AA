@@ -35,6 +35,9 @@
             tools:ignore="Instantiatable" />
         <activity android:name=".StudyActivity"
             tools:ignore="Instantiatable" />
+        <activity android:name=".Writing"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".WritingActivity"/>
     </application>
 
 </manifest>
