@@ -42,7 +42,7 @@ public class WritingActivity extends AppCompatActivity {
                 String title = et_title.getText().toString();
                 String content = et_content.getText().toString();
                 Writing writing = new Writing(title, content,"username",board,firebaseUser.getEmail());
-                databaseReference.child("writing").push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>(){
+                databaseReference.child(board).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>(){
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();

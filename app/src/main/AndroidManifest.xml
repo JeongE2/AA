@@ -38,6 +38,11 @@
         <activity android:name=".Writing"
             tools:ignore="Instantiatable" />
         <activity android:name=".WritingActivity"/>
+        <activity android:name=".BoardAdapter"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".BoardItem"
+            tools:ignore="Instantiatable" />
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 
 </manifest>
