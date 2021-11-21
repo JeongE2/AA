@@ -14,7 +14,8 @@
         android:theme="@style/Theme.AA">
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,26 +23,37 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdverActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".DailyActivity"
             tools:ignore="Instantiatable" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".MypageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="Instantiatable" />
         <activity android:name=".OutActivity"
-            tools:ignore="Instantiatable" />
-        <activity android:name=".SignupActivity" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".SignupActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".User"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".StudyActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".Writing"
-            tools:ignore="Instantiatable" />
-        <activity android:name=".WritingActivity"/>
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".WritingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".BoardAdapter"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".BoardItem"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 

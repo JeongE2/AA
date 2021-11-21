@@ -9,14 +9,26 @@
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/home"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_img"
+        android:layout_alignParentLeft="true"/>
 
     <TextView
         android:id="@+id/weather"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="날씨"
-        android:textSize="50dp"/>
+        android:textSize="50dp"
+        android:layout_below="@id/home"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -28,7 +40,9 @@
         android:layout_height="50dp"
         android:layout_weight="1"
         android:textSize="4pt"
-        android:text="학과"/>
+        android:text="학과"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
 
         <Button
             android:id="@+id/out"
@@ -36,28 +50,36 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:textSize="4pt"
-            android:text="대외"/>
+            android:text="대외"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"/>
             <Button
                 android:id="@+id/daily"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:textSize="4pt"
-                android:text="일상"/>
+                android:text="일상"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"/>
         <Button
             android:id="@+id/adver"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:textSize="4pt"
-            android:text="홍보"/>
+            android:text="홍보"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"/>
         <Button
             android:id="@+id/mypage"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:textSize="4pt"
-            android:text="마이페이지"/>
+            android:text="마이페이지"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"/>
 
     </LinearLayout>
 
