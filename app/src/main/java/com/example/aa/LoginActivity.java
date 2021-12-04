@@ -1,9 +1,11 @@
 package com.example.aa;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
     Button signup, login;
     EditText email, passwd;
     FirebaseAuth firebaseAuth;
+    private CheckBox setid;
+    private SharedPreferences setting;
+    private SharedPreferences.Editor editor;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
@@ -26,7 +31,31 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.btn_login);
         email = findViewById(R.id.et_email);
         passwd = findViewById(R.id.et_passwd);
+        setid = findViewById(R.id.setid);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        setting = getSharedPreferences("setting", 0);
+        editor = setting.edit();
+        if(setting.getBoolean("setid", false)){
+            email.setText(setting.getString("setID", ""));
+            setid.setChecked(true);
+        }
+        setid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(setid.isChecked()){
+                    String id = email.getText().toString();
+                    editor.putString("setID", id);
+                    editor.putBoolean("setid", true);
+                    editor.commit();
+                }
+                else{
+                    editor.clear();
+                    editor.commit();
+                }
+            }
+        });
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -54,7 +54,7 @@ public class WritingActivity extends AppCompatActivity {
                 String title = et_title.getText().toString();
                 String content = et_content.getText().toString();
                 Writing writing = new Writing(title, content, nickname , board, firebaseUser.getEmail());
-                if (board == "study"){
+                if (board.equals("study")){
                     String col = intent.getStringExtra("col");
                     String colcol = intent.getStringExtra("colcol");
                     databaseReference.child(board).child(col).child(colcol).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {

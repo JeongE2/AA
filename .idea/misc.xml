@@ -4,18 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AA/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1787037037037037" />
-        <entry key="..\:/AA/app/src/main/res/drawable/home_img.xml" value="0.1" />
-        <entry key="..\:/AA/app/src/main/res/layout/activity_main.xml" value="0.12529550827423167" />
+        <entry key="..\:/AA/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AA/app/src/main/res/layout/adver.xml" value="0.1" />
         <entry key="..\:/AA/app/src/main/res/layout/daily.xml" value="0.1" />
-        <entry key="..\:/AA/app/src/main/res/layout/item.xml" value="0.12037037037037036" />
-        <entry key="..\:/AA/app/src/main/res/layout/login.xml" value="0.264" />
+        <entry key="..\:/AA/app/src/main/res/layout/login.xml" value="0.13120567375886524" />
         <entry key="..\:/AA/app/src/main/res/layout/mypage.xml" value="0.264" />
         <entry key="..\:/AA/app/src/main/res/layout/out.xml" value="0.1" />
         <entry key="..\:/AA/app/src/main/res/layout/signup.xml" value="0.264" />
         <entry key="..\:/AA/app/src/main/res/layout/study.xml" value="0.264" />
         <entry key="..\:/AA/app/src/main/res/layout/writig.xml" value="0.2975708502024291" />
-        <entry key="..\:/AA/app/src/main/res/layout/writing.xml" value="0.4578125" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/activity_listitem.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/login.xml" value="0.536" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/reading.xml" value="0.2" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/rview_item.xml" value="0.2" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/study.xml" value="0.264" />
+        <entry key="..\:/Users/kpo52/AndroidStudioProjects/AA/app/src/main/res/layout/writing_item.xml" value="0.2" />
       </map>
     </option>
   </component>
