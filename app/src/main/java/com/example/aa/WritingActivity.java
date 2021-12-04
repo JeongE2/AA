@@ -54,14 +54,28 @@ public class WritingActivity extends AppCompatActivity {
                 String title = et_title.getText().toString();
                 String content = et_content.getText().toString();
                 Writing writing = new Writing(title, content, nickname , board, firebaseUser.getEmail());
-                databaseReference.child(board).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(WritingActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                });
+                if (board == "study"){
+                    String col = intent.getStringExtra("col");
+                    String colcol = intent.getStringExtra("colcol");
+                    databaseReference.child(board).child(col).child(colcol).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(WritingActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
+                else {
+                    databaseReference.child(board).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(WritingActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
             }
         });
     }
