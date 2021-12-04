@@ -1,0 +1,58 @@
+<resources>
+    <string name="college_name">AA</string>
+    <string-array name = "College">
+        <item>문과대학</item>
+        <item>자연과학대학</item>
+        <item>공과대학</item>
+        <item>기계IT대학</item>
+        <item>정치행정대학</item>
+        <item>상경대학</item>
+        <item>경영대학</item>
+        <item>의과대학</item>
+        <item>약학대학</item>
+        <item>생명응용과학대학</item>
+        <item>생활과학대학</item>
+        <item>사범대학</item>
+        <item>디자인미술대학</item>
+        <item>음악대학</item>
+        <item>야간강좌개설부</item>
+        <item>기초교육대학</item>
+        <item>건축학부</item>
+        <item>국제학부</item>
+        <item>엽합전공</item>
+        <item>생명공학부</item>
+    </string-array>
+    <string-array name = "Col1">
+        <item>국어국문학과</item>
+        <item>중국언어문화학과</item>
+        <item>일어일문학과</item>
+        <item>영어영문학과</item>
+        <item>유럽언어문화학부</item>
+        <item>프랑스어문전공</item>
+        <item>독일언어문화전공</item>
+        <item>철학과</item>
+        <item>학과소개</item>
+        <item>역사학과</item>
+        <item>문화인류학과</item>
+        <item>심리학과</item>
+        <item>사회학과</item>
+        <item>언론정보학과</item>
+    </string-array>
+    <string-array name = "Col2">
+        <item>수학과</item>
+        <item>통계학과</item>
+        <item>물리학과</item>
+        <item>화학생화학과</item>
+        <item>생명과학과</item>
+    </string-array>
+    <string-array name = "Col3">
+        <item> 건설시스템공학과</item>
+        <item>환경공학과</item>
+        <item>도시공학과</item>
+        <item>신소재공학부</item>
+        <item> 화학공학부</item>
+        <item>파이버시스템공학과</item>
+    </string-array>
+
+</resources>
+
