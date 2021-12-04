@@ -28,7 +28,8 @@
         <activity android:name=".DailyActivity"
             tools:ignore="Instantiatable" />
         <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity android:name=".MypageActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="Instantiatable" />
@@ -36,7 +37,8 @@
             tools:ignore="Instantiatable"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".SignupActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity android:name=".User"
             tools:ignore="Instantiatable"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
@@ -47,13 +49,15 @@
             tools:ignore="Instantiatable"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".WritingActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".BoardAdapter"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".BoardItem"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".MyWriting"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".MyComment"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
+
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 

@@ -27,10 +27,10 @@ import java.util.ArrayList;
 
 public class AdverActivity extends Fragment implements View.OnClickListener {
     private RecyclerView recyclerView;
-    private ArrayList<BoardItem> arrayList = new ArrayList<BoardItem>();
-    private BoardAdapter boardAdapter;
+    private ArrayList<Writing> arrayList;
+    private WritingAdapter writingAdapter;
     private Button btn_write;
-    FirebaseDatabase firebaseDatabase;
+    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference;
 
     @SuppressLint("NotifyDataSetChanged")
@@ -38,25 +38,26 @@ public class AdverActivity extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.adver, container, false);
+        writingAdapter = new WritingAdapter();
+        arrayList = new ArrayList<>();
         recyclerView = v.findViewById(R.id.recy);
         recyclerView.setHasFixedSize(true);
-        boardAdapter = new BoardAdapter(arrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(boardAdapter);
+        recyclerView.setAdapter(writingAdapter);
         btn_write = v.findViewById(R.id.btn_writing);
         btn_write.setOnClickListener(this);
-        databaseReference = FirebaseDatabase.getInstance().getReference("writing");
+        databaseReference = firebaseDatabase.getReference("adver");
+        arrayList.clear();
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                arrayList.clear();
                 for(DataSnapshot datasnapshot : snapshot.getChildren()){
-                        BoardItem item = datasnapshot.getValue(BoardItem.class);
-                        arrayList.add(item);
+                    Writing item = datasnapshot.getValue(Writing.class);
+                    arrayList.add(item);
                 }
-                boardAdapter.notifyDataSetChanged();
+                setAdver();
             }
 
             @Override
@@ -77,4 +78,11 @@ public class AdverActivity extends Fragment implements View.OnClickListener {
         }
 
         };
+
+    public void setAdver(){
+        for(int i=0; i<arrayList.size(); i++){
+            writingAdapter.set(arrayList.get(i));
+        }
+        recyclerView.setAdapter(writingAdapter);
+    }
 }

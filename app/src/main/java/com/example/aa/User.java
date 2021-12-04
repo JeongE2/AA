@@ -3,10 +3,12 @@ package com.example.aa;
 public class User {
     private String id;
     private String password;
+    private String nickname;
 
-    public User(String id, String password) {
+    public User(String id, String password, String nickname) {
         this.id = id;
         this.password = password;
+        this.nickname=nickname;
     }
 
     public User(){
@@ -28,6 +30,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getNickname(){return nickname;}
+
+    public void setNickname(String nickname){this.nickname=nickname;}
 
 }
 

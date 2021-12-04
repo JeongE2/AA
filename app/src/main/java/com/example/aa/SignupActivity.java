@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity{
     Button signup;
-    EditText uemail, upasswd;
+    EditText uemail, upasswd, unickname;
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
 
@@ -30,6 +30,7 @@ public class SignupActivity extends AppCompatActivity{
         uemail = findViewById(R.id.email);
         upasswd = findViewById(R.id.passwd);
         signup = findViewById(R.id.signup);
+        unickname = findViewById(R.id.nickname);
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("User");
         signup.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,7 @@ public class SignupActivity extends AppCompatActivity{
             public void onClick(View v) {
                 String email = uemail.getText().toString().trim();
                 String passwd = upasswd.getText().toString().trim();
+                String nickname = unickname.getText().toString();
 
                 firebaseAuth.createUserWithEmailAndPassword(email,passwd).addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -46,6 +48,7 @@ public class SignupActivity extends AppCompatActivity{
                             User user = new User();
                             user.setId(email);
                             user.setPassword(passwd);
+                            user.setNickname(nickname);
                             databaseReference.child(firebaseUser.getUid()).setValue(user);
                             Toast.makeText(SignupActivity.this, "회원가입 완료", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(SignupActivity.this, LoginActivity.class);

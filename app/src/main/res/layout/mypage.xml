@@ -3,6 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/usernickname"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textStyle="bold"
+    android:layout_marginTop="30dp"
+    android:textSize="15pt"
+    />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/usernickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        android:id="@+id/mywriting"
+        android:layout_marginTop="130dp"
+        android:text="내가 쓴 글"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:id="@+id/mycom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mywriting"
+        android:layout_marginTop="50dp"
+        android:text="내가 댓글단 글"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/mycom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/logout"
+        android:layout_marginTop="50dp"
+        android:text="로그아웃"
+        android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
