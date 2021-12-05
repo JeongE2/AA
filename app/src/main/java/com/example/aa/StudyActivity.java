@@ -97,13 +97,11 @@ public class StudyActivity extends Fragment implements View.OnClickListener {
         str[18]= getResources().getStringArray(R.array.Col19);
         str[19]= getResources().getStringArray(R.array.Col20);
 
-        listView= (ListView)  v.findViewById(R.id.lv_fileList);
-
         Spinner spin1 = (Spinner) v.findViewById(R.id.spinner1);
         Spinner spin2 = (Spinner) v.findViewById(R.id.spinner2);
         ArrayAdapter<String> ad1 = new ArrayAdapter<String>(getActivity(), simple_spinner_item,getResources().getStringArray(R.array.College));
-        adapter = new ArrayAdapter<String>(getActivity(), R.layout.activity_listitem, fileList);
-        listView.setAdapter(adapter);
+        //adapter = new ArrayAdapter<String>(getActivity(), R.layout.activity_listitem, fileList);
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseRef = database.getReference("study");
 
@@ -129,6 +127,7 @@ public class StudyActivity extends Fragment implements View.OnClickListener {
                                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
                                     String str = fileSnapshot.child("title").getValue(String.class);
                                     String str2 = fileSnapshot.child("content").getValue(String.class);
+                                    String str3 = fileSnapshot.child("nickname").getValue(String.class);
                                     Log.i("TAG: value is ", str);
                                     RecyclerItem re = new RecyclerItem(str,str2);
                                     mList.add(re);

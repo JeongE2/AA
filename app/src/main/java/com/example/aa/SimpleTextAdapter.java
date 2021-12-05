@@ -17,7 +17,7 @@ public class SimpleTextAdapter extends RecyclerView.Adapter<SimpleTextAdapter.Vi
 
     // 아이템 뷰를 저장하는 뷰홀더 클래스.
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView1,textView2 ;
+        TextView textView1,textView2,textview3 ;
 
         ViewHolder(View itemView) {
             super(itemView) ;
