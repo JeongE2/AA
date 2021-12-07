@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </FrameLayout>
-
     <ImageButton
         android:id="@+id/home"
         android:backgroundTint="@color/white"
@@ -21,14 +14,77 @@
         android:src="@drawable/home_img"
         android:layout_alignParentLeft="true"/>
 
-    <TextView
-        android:id="@+id/weather"
+    <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="날씨"
-        android:textSize="50dp"
-        android:layout_below="@id/home"
-        />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/purple_500"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sun"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home"
+                    android:layout_gravity="center"
+                    android:text="영남대학교"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/cel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home"
+                    android:layout_gravity="center"
+                    android:text="13도/2도"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/store"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#A8E4DF"
+                    android:drawableLeft="@drawable/store_img"
+                    android:text="스토어\n바로가기"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
