@@ -1,6 +1,7 @@
 package com.example.aa;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,9 +33,23 @@ public class WritingAdapter extends RecyclerView.Adapter<WritingViewHolder> {
         String content = item.getContent();
         String nickname = item.getNickname();
         String board = item.getBoard();
+        String uid = item.getUid();
         holder.title.setText(title);
         holder.content.setText(content);
         holder.nickname.setText(nickname);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ReadActivity.class);
+                intent.putExtra("title", title);
+                intent.putExtra("content",content);
+                intent.putExtra("nickname",nickname);
+                intent.putExtra("board",board);
+                intent.putExtra("uid",uid);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

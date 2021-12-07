@@ -6,13 +6,15 @@ public class Writing {
     private String email;
     private String nickname;
     private String board;
+    private String uid;
 
-    public Writing(String title, String content, String nickname, String board, String email){
+    public Writing(String title, String content, String nickname, String board, String email, String uid){
         this.title=title;
         this.content=content;
         this.nickname=nickname;
         this.board=board;
         this.email=email;
+        this.uid = uid;
     }
 
     public Writing(){
@@ -24,4 +26,5 @@ public class Writing {
     public String getEmail(){return email;}
     public String getBoard(){return board;}
     public String getContent(){return content;}
+    public String getUid(){return uid;}
 }

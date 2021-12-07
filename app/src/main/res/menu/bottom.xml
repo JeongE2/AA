@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/study"
+        android:enabled="true"
+        android:icon="@drawable/study"
+        android:title="Study"/>
+
+    <item
+        android:id="@+id/out"
+        android:enabled="true"
+        android:icon="@drawable/out"
+        android:title="Out"/>
+
+    <item
+        android:id="@+id/daily"
+        android:enabled="true"
+        android:icon="@drawable/daily"
+        android:title="Daily"/>
+
+    <item
+        android:id="@+id/adver"
+        android:enabled="true"
+        android:icon="@drawable/adver"
+        android:title="Adver"/>
+
+    <item
+        android:id="@+id/mypage"
+        android:enabled="true"
+        android:icon="@drawable/mypage"
+        android:title="Mypage"/>
+</menu>

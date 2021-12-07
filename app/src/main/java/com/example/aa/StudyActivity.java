@@ -63,11 +63,11 @@ public class StudyActivity extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (!calledAlready)
+        /*if (!calledAlready)
         {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true); // 다른 인스턴스보다 먼저 실행되어야 한다.
             calledAlready = true;
-        }
+        }*/
 
 
         View v = inflater.inflate(R.layout.study, container, false);

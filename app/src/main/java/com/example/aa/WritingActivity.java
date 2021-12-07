@@ -53,11 +53,11 @@ public class WritingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String title = et_title.getText().toString();
                 String content = et_content.getText().toString();
-                Writing writing = new Writing(title, content, nickname , board, firebaseUser.getEmail());
+                Writing writing = new Writing(title, content, nickname , board, firebaseUser.getEmail(), cuid);
                 if (board.equals("study")){
                     String col = intent.getStringExtra("col");
                     String colcol = intent.getStringExtra("colcol");
-                    databaseReference.child(board).child(col).child(colcol).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    databaseReference.child(board).child(col).child(colcol).child(cuid + title + content).setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
@@ -67,7 +67,7 @@ public class WritingActivity extends AppCompatActivity {
                     });
                 }
                 else {
-                    databaseReference.child(board).push().setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    databaseReference.child(board).child(cuid + title + content).setValue(writing).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             Toast.makeText(WritingActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
