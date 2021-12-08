@@ -87,7 +87,7 @@
                     android:id="@+id/store"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#A8E4DF"
+                    android:backgroundTint="#F3F3F3"
                     android:drawableLeft="@drawable/store_img"
                     android:text="스토어\n바로가기"
                     android:textSize="20sp" />

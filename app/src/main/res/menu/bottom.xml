@@ -4,29 +4,29 @@
         android:id="@+id/study"
         android:enabled="true"
         android:icon="@drawable/study"
-        android:title="Study"/>
+        android:title="학과"/>
 
     <item
         android:id="@+id/out"
         android:enabled="true"
         android:icon="@drawable/out"
-        android:title="Out"/>
+        android:title="대외활동"/>
 
     <item
         android:id="@+id/daily"
         android:enabled="true"
         android:icon="@drawable/daily"
-        android:title="Daily"/>
+        android:title="일상"/>
 
     <item
         android:id="@+id/adver"
         android:enabled="true"
         android:icon="@drawable/adver"
-        android:title="Adver"/>
+        android:title="광고"/>
 
     <item
         android:id="@+id/mypage"
         android:enabled="true"
         android:icon="@drawable/mypage"
-        android:title="Mypage"/>
+        android:title="마이페이지"/>
 </menu>
